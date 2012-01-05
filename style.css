@@ -1,0 +1,276 @@
+.x-filemng-panel .x-filemng-path {
+	padding:2px 2px 2px 20px;
+	background:url(images/folder.png) 0 center no-repeat;
+}
+.x-filemng-panel .x-filemng-path span {
+	margin:0px 1px;
+}
+.x-filemng-panel .x-filemng-path a {
+	text-decoration:none;
+}
+.x-filemng-panel .x-filemng-path a:hover {
+	text-decoration:underline;
+}
+.x-filemng-panel .wait {
+	width:18px;
+	height:18px;
+	background:url(images/wait.gif) 0 0 no-repeat;
+}
+
+
+.x-filemng-panel .x-filemng-listview img.file-icon {
+	width:16px;
+	width:16px;
+	margin-right:3px;
+	vertical-align:middle;
+	background:url('images/file.png') center center no-repeat;
+}
+.x-filemng-panel .x-filemng-properties {
+	padding:5px;
+}
+.x-filemng-panel .x-filemng-properties li {
+	color:#666;
+	font-size:13px;
+}
+.x-filemng-panel .x-filemng-properties li b{
+	color:#000;
+}
+.x-filemng-panel .x-filemng-properties td {
+	vertical-align:top;
+}
+.x-filemng-panel .x-filemng-properties  .wrap-image {
+	position:relative;
+	
+}
+
+.x-filemng-panel .x-filemng-properties .x-filemng-icon .wite {
+	background:black url('images/wait.gif') center center no-repeat;
+	width:20px;
+	height:20px;
+	position:absolute;
+	display:none;
+}
+.x-filemng-panel .x-filemng-properties .loading ,
+.x-filemng-panel .x-filemng-properties .doloading 
+{
+	width:133px;
+}
+.x-filemng-panel .x-filemng-properties .loading .wite {
+	display:block;
+	
+}
+
+.x-filemng-panel .x-filemng-properties .magnifier {
+	display:none;
+	background:url('images/magnifier.png') 0 0 no-repeat;
+	width:24px;
+	height:24px;
+	position:absolute;
+	right: 12px;
+	bottom: 8px;
+	cursor:pointer;
+}
+.x-filemng-panel .x-filemng-listview .action-cut em{
+	filter:progid:DXImageTransform.Microsoft.Alpha(opacity=50); /* IE 5.5+*/
+	-moz-opacity: 0.5; /* Mozilla 1.6 и ниже */
+	-khtml-opacity: 0.5; /* Konqueror 3.1, Safari 1.1 */
+	opacity: 0.5; /* CSS3 - Mozilla 1.7b +, Firefox 0.9 +, Safari 1.2+, Opera 9+ */
+
+}
+.x-filemng-panel .x-filemng-listview .type-folder img.file-icon {
+	background-image:url(images/folder.png);
+}
+
+.x-filemng-panel .x-filemng-listview img.file-icon-dir {background-image:url('/images/admin/filemanager/folder.png');}
+
+.x-filemng-panel .x-filemng-listview .type-image img.file-icon {
+	background-image:url('images/image.png');
+}
+
+.x-filemng-panel .x-filemng-listview img.file-icon-zip,
+.x-filemng-panel .x-filemng-listview  .type-arhive img.file-icon
+{
+	background-image:url('images/page_white_zip.png');
+}
+
+.x-filemng-panel .x-filemng-listview img.file-icon-excel
+,.x-filemng-panel .x-filemng-listview img.file-icon-xls
+,.x-filemng-panel .x-filemng-listview img.file-icon-xlsx
+{
+	background-image:url('images/file_excel.png');
+}
+
+.x-filemng-panel .x-filemng-listview img.file-icon-doc 
+,.x-filemng-panel .x-filemng-listview img.file-icon-docx 
+{
+	background-image:url('images/file_word.png');
+}
+
+.x-filemng-panel .x-filemng-listview img.file-icon-php 
+{
+	background-image:url('images/file_php.png');
+}
+
+.x-filemng-panel .x-filemng-listview img.file-icon-htm 
+,.x-filemng-panel .x-filemng-listview img.file-icon-html 
+,.x-filemng-panel .x-filemng-listview img.file-icon-xhtml 
+{
+	background-image:url('images/html.png');
+}
+.x-filemng-panel .x-filemng-listview .contrl {
+	float:right;
+	display:none;
+}
+.x-filemng-panel .x-list-over .contrl {
+	display:block;
+}
+
+/* Стили для превью вида */
+.x-filemng-panel .x-filemng-icon .thumb {
+	padding: 3px;
+	height:75px;
+	width:100px;
+	text-align:center;
+	vertical-align:middle;
+}
+.x-filemng-panel .x-filemng-icon .type-image .thumb {
+	background: #dddddd;
+}
+.x-filemng-panel .x-filemng-icon img {
+	max-width:100%;
+	max-height:100%;
+}
+.x-filemng-panel .x-filemng-icon .wite {
+	background:black url('images/wait.gif') center center no-repeat;
+	width:20px;
+	height:20px;
+	position:absolute;
+	display:none;
+	left:0;
+	top:0;
+}
+.x-filemng-panel .x-filemng-icon .loading .wite {
+	display:block;
+}
+.x-filemng-panel .x-filemng-icon .thumb-wrap {
+	float: left;
+	margin: 4px;
+	margin-right: 0;
+	padding: 5px;
+	position:relative;
+}
+.x-filemng-panel .x-filemng-icon .thumb-wrap .imgsize {
+	position:absolute;
+	top:0;
+	right:0;
+	background:#000;
+	color:#FFF;
+	padding:2px;
+	font-size:10px;
+}
+
+.x-filemng-panel .x-filemng-icon .thumb-wrap span {
+    display: block;
+    overflow: hidden;
+    text-align: center;
+}
+
+.x-filemng-panel .x-filemng-icon .x-view-over {
+    border:1px solid #dddddd;
+    background-color: #efefef;
+    padding: 4px;
+}
+
+.x-filemng-panel .x-filemng-icon .x-list-selected {
+    background: #DFEDFF;
+    border: 1px solid #6593cf;
+    padding: 4px;
+}
+.x-filemng-panel .x-filemng-icon .type-folder .thumb {
+	background: transparent;
+}
+.x-filemng-panel .x-filemng-icon img.file-icon {
+	width:100%;
+	background:url('images/big_file.png') center center no-repeat;
+}
+.x-filemng-panel .x-filemng-icon .type-folder img.file-icon {
+	width:100%;
+	background:url('images/big_folder.png') center center no-repeat;
+}
+
+.x-filemng-panel .x-filemng-icon .x-list-selected .thumb {
+    background:transparent;
+}
+
+.x-filemng-panel .x-filemng-icon .x-list-selected span {
+    color:#1A4D8F;
+}
+.x-filemng-panel .x-filemng-icon .action-cut {
+	filter:progid:DXImageTransform.Microsoft.Alpha(opacity=50); /* IE 5.5+*/
+	-moz-opacity: 0.5; /* Mozilla 1.6 и ниже */
+	-khtml-opacity: 0.5; /* Konqueror 3.1, Safari 1.1 */
+	opacity: 0.5; /* CSS3 - Mozilla 1.7b +, Firefox 0.9 +, Safari 1.2+, Opera 9+ */
+
+}
+/* Стили для кнопок */
+.x-filemng-panel .search {
+	background:#FFF url(images/search.png) 1px center no-repeat;
+	padding-left:18px;
+	
+}
+.x-filemng-panel .b-addfolder {
+	background-image:url(images/folder_add.png);
+}
+.x-filemng-panel .b-refresh {
+	background-image:url(images/arrow_refresh.png);
+}
+.x-filemng-panel .b-undo {
+	background-image:url(images/arrow_undo.png);
+}
+.x-filemng-panel .b-up {
+	background-image:url(images/arrow_up.png);
+}
+.x-filemng-panel .b-redo {
+	background-image:url(images/arrow_redo.png);
+}
+.x-filemng-panel .b-rename {
+	background-image:url(images/textfield_rename.png);
+}
+.x-filemng-panel .b-del {
+	background-image:url(images/delete.png);
+}
+.x-filemng-panel .b-toggle-tree {
+	background-image:url(images/application_side_tree.png);
+}
+.x-filemng-panel .b-toggle-property {
+	background-image:url(images/application_split.png);
+}
+.x-filemng-panel .b-upload-file {
+	background-image:url(images/upload_file.png);
+}
+.x-filemng-panel .b-cut-file {
+	background-image:url(images/cut.png);
+}
+.x-filemng-panel .b-paste-file {
+	background-image:url(images/paste.png);
+}
+.x-filemng-panel .b-copy-file {
+	background-image:url(images/copy.png);
+}
+
+.x-filemng-panel .b-view-list {
+	background-image:url(images/application-list.png);
+}
+.x-filemng-panel .b-view-icon {
+	background-image:url(images/application-icon.png);
+}
+.x-filemng-panel a.b-download,
+.x-filemng-panel a.b-del
+ {
+	padding-left:20px;
+	background-position:0 center;
+	background-repeat: no-repeat;
+}
+.x-filemng-panel .b-download {
+	background-image:url(images/folder_get.png);
+}

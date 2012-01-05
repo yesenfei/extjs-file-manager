@@ -1,0 +1,42 @@
+<html>
+<head>
+	<meta HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=utf-8"/>
+	<title>Файловый менеджер</title>
+	<script type="text/javascript" src="http://extjs-public.googlecode.com/svn/tags/extjs-3.3.1/release/adapter/ext/ext-base-debug.js"></script>
+	<script type="text/javascript" src="http://extjs-public.googlecode.com/svn/tags/extjs-3.3.1/release/ext-all-debug.js"></script>
+	<script type="text/javascript" src="http://extjs-public.googlecode.com/svn/tags/extjs-3.3.1/release/src/locale/ext-lang-ru.js"></script>
+	<script type="text/javascript" src="fileuploadfield/FileUploadField.js"></script>
+	<script type="text/javascript" src="Ext.ux.FileMng.js"></script>
+	
+	<link rel="stylesheet" type="text/css" href="http://extjs-public.googlecode.com/svn/tags/extjs-3.3.1/release/resources/css/ext-all.css"/>
+	<link rel="stylesheet" type="text/css" href="fileuploadfield/css/fileuploadfield.css"/>
+	<link rel="stylesheet" type="text/css" href="style.css"/>
+</head>
+<body>
+	<div>Версия <span id="v">0.001</span></div>
+	<div id="filemng" style="padding:100px;">
+	</div>
+</body>
+<script type="text/javascript">
+Ext.onReady(function() {
+    Ext.QuickTips.init();
+	Ext.state.Manager.setProvider(new Ext.state.CookieProvider());
+	window.filemng = new Ext.ux.filemng.Panel({
+		border:false,
+		stateId:'saf',
+		stateful:true,
+		baseUrl:'/data/'
+	})
+	var win = new Ext.Window({
+		layout:'fit',
+		width:1000,
+		height:600,
+		title:'Менеджер файлов',
+		maximizable:true,
+		items: window.filemng
+	});
+	win.show()
+	Ext.get('v').update(Ext.ux.filemng.v);
+});
+</script>
+</html>

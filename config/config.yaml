@@ -1,0 +1,30 @@
+# Путь до файлов (Path to the file)
+baseDir: 'D:\web\home\test.loc\www\data'
+webDir: '/data'
+# Кодировка web страницы (Encoding of web page)
+charsetWeb: utf-8
+# Кодировка файловой системы (Encoding of the file system)
+charset: cp1251
+# Кодировка имини файлов в архиве
+charsetZip: cp866
+
+# Язык сообщений (Message language)
+lang: ru_RU
+# Права на вновь созданные папки (The rights to newly created folders)
+mkdirmode: 0777
+# Скрывать файлы
+hidden: (^\..+)
+# Настрой лога
+log_dir: 'D:\web\home\test.loc\www\log'
+log_level: error|warning|info|debug
+# Максимальный размер загружаемого файла
+# maxUploadFileSize: 5 * 1024 * 1024
+# Типы файлов(File Types)
+types:
+  html:
+    exp: htm|html|php
+  image:
+    cls: ImageModel
+    exp: png|jpeg|jpg|jpe|bmp|tif|gif
+  arhive:
+    exp: zip|rar|7z
