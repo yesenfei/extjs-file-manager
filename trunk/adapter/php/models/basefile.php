@@ -81,13 +81,13 @@ class BaseFileModel
 
 		unknown: unknown file type
 	*/
-	static function createFromType($type, $dir,$name)
+	static function createFromType($type, $pachFile,$name)
 	{
 		$types = Cfg::get('types', array());
 		switch($type)
 		{
 			case 'dir':
-				return new FolderModel($dir,$name,isset($types[$type])?$types[$type]:array());
+				return new FolderModel($pachFile,$name,isset($types[$type])?$types[$type]:array());
 			break;
 			case 'file':
 				$pos = strrpos($name, ".");
@@ -99,9 +99,9 @@ class BaseFileModel
 				if(isset($types[$type]) && isset($types[$type]['cls']))
 				{
 					$cls = $types[$type]['cls'];
-					return new $cls($dir,$name,$types[$type]);
+					return new $cls($pachFile,$name,$types[$type]);
 				} 
-				return new FileModel($dir,$name,isset($types[$type])?$types[$type]:array());
+				return new FileModel($pachFile,$name,isset($types[$type])?$types[$type]:array());
 			break;
 			default:
 			break;

@@ -1,10 +1,20 @@
 <?php
 class Lib {
-	// Получить ссылку на файл в системе
+	/**
+	 * РџРѕР»СѓС‡РёС‚СЊ СЃСЃС‹Р»РєСѓ РЅР° С„Р°Р№Р» РІ СЃРёСЃС‚РµРјРµ
+	 * @param string $path РћС‚РЅРѕСЃРёС‚РµР»СЊРЅС‹Р№ РїСѓС‚СЊ Рє С„Р°Р№Р»Сѓ
+	 * @return string РџСѓС‚СЊ РІ СЃРёСЃС‚РµРјРµ
+	 */
 	static function gpath($path = ''){
 		 return Cfg::get('baseDir').'/'.trim($path,' /\\');
 	}
-	// Конвертирует обьект оиз одной кодировки в другую
+	/**
+	 * РљРѕРЅРІРµСЂС‚РёСЂСѓРµС‚ СЂРµРєСѓСЂСЃРёРІРЅРѕ РѕР±СЊРµРєС‚ РёР· РѕРґРЅРѕР№ РєРѕРґРёСЂРѕРІРєРё РІ РґСЂСѓРіСѓСЋ
+	 * @param Object $var
+	 * @param string $charsetFrom
+	 * @param string $charsetTo
+	 * @return Object 
+	 */
 	static function convert($var,$charsetFrom,$charsetTo){
 		if(is_array($var)){
 			foreach($var as $n=>$v){
@@ -20,7 +30,11 @@ class Lib {
 		}
 		return $var;
 	}
-	// Кодировать объект
+	/**
+	 * РљРѕРґРёСЂРѕРІР°С‚СЊ РѕР±СЉРµРєС‚ СЃРѕРіР»Р°СЃРЅРѕ РЅР°СЃС‚СЂРѕР№РєР°Рј
+	 * @param Object $var
+	 * @return Object 
+	 */
 	static function code($var)
 	{
 		$charsetFrom = Cfg::get('charset','cp1251');
@@ -31,8 +45,12 @@ class Lib {
 		}
 		return $var;
 	}
-	// Декодировать объект
-	static function decode($var,$charset = 'UTF-8')
+	/**
+	 * Р”РµРєРѕРґРёСЂРѕРІР°С‚СЊ РѕР±СЉРµРєС‚ СЃРѕРіР»Р°СЃРЅРѕ РЅР°СЃС‚СЂРѕР№РєР°Рј
+	 * @param Object $var
+	 * @return Object 
+	 */
+	static function decode($var)
 	{
 		$charsetFrom = Cfg::get('charsetWeb','UTF-8');
 		$charsetTo =  Cfg::get('charset','cp1251');
@@ -42,7 +60,11 @@ class Lib {
 		}
 		return $var;
 	}
-	// Человеческий вид доступа файла
+	/**
+	 * Р§РµР»РѕРІРµС‡РµСЃРєРёР№ РІРёРґ РґРѕСЃС‚СѓРїР° С„Р°Р№Р»Р°
+	 * @param string $path
+	 * @return string 
+	 */
 	static function hperms($path)
 	{
 		clearstatcache();
@@ -70,6 +92,11 @@ class Lib {
 		clearstatcache();
 		return $str;
 	}
+	/**
+	 * РџРѕР»СѓС‡РёС‚СЊ РёРЅС„РѕСЂРјР°С†РёСЋ Рѕ С„Р°Р№Р»Рµ
+	 * @param string $path
+	 * @return string 
+	 */
 	static function stat($path) {
 		clearstatcache();
 		$file = self::gpath($path);
@@ -114,13 +141,13 @@ class Lib {
 		clearstatcache();
 		return $s;
 	}
-	// Доступно ли редактирование
+	// Р”РѕСЃС‚СѓРїРЅРѕ Р»Рё СЂРµРґР°РєС‚РёСЂРѕРІР°РЅРёРµ
 	static function isWrite($path)
 	{
-		print_r(Lib::hperms($path));
+		 print_r(Lib::hperms($path));
 		 return true;
 	}
-	// Доступно ли чтение
+	// Р”РѕСЃС‚СѓРїРЅРѕ Р»Рё С‡С‚РµРЅРёРµ
 	static function isRead($path)
 	{
 		$path = self::gpath($path);

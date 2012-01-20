@@ -7,8 +7,7 @@ class FilesController extends ApplicationController {
 			return new Response($data);
 		} catch(Exception $ex) {
 			Log::exception($ex);
-			$msg = gettext("Не возможно открыть директорию ").$this->params->dir;
-			return new Response(false,false,$msg);
+			return new ResponseError(gettext("Не возможно открыть директорию ").$this->params->dir);
 		}
 	}
 	public function getChildFolderTree()
@@ -18,7 +17,7 @@ class FilesController extends ApplicationController {
 		} catch(Exception $ex) {
 			Log::exception($ex);
 			$msg = gettext("Не возможно открыть директорию ").$this->params->dir;
-			return new Response(false,false,$msg);
+			return new ResponseError($msg);
 		}
 	}
 	/*function getChildTree()
@@ -33,7 +32,7 @@ class FilesController extends ApplicationController {
 			return new Response($file?true:false);
 		} catch(Exception $ex) {
 			Log::exception($ex);
-			return new Response(false,false,$ex->message);
+			return new ResponseError($ex->message);
 		}
 	}
 	public function preview()
@@ -119,7 +118,7 @@ class FilesController extends ApplicationController {
 				$file = BasefileModel::createFromPath($path);
 				if($file){
 					if(!$file->copyTo($this->params->target)){
-						return new Response(false,false,gettext("Не удалось скопировать файлы."));
+						return new ResponseError(gettext("Не удалось скопировать файлы."));
 					}
 				}
 			}
@@ -128,7 +127,7 @@ class FilesController extends ApplicationController {
 		}  catch(Exception $ex) {
 			Log::exception($ex);
 		}
-		return new Response(false,false,gettext("Не удалось скопировать файлы."));
+		return new ResponseError(gettext("Не удалось скопировать файлы."));
 	}
 	public function cut()
 	{
@@ -137,7 +136,7 @@ class FilesController extends ApplicationController {
 				$file = BasefileModel::createFromPath($path);
 				if($file){
 					if(!$file->moveTo($this->params->target)){
-						return new Response(false,false,gettext("Не удалось перенести файлы."));
+						return new ResponseError(gettext("Не удалось перенести файлы."));
 					}
 				}
 			}
@@ -146,7 +145,7 @@ class FilesController extends ApplicationController {
 		}  catch(Exception $ex) {
 			Log::exception($ex);
 		}
-		return new Response(false,false,gettext("Не удалось перенести файлы."));
+		return new ResponseError(gettext("Не удалось перенести файлы."));
 	}
 	public function rename()
 	{
@@ -155,10 +154,10 @@ class FilesController extends ApplicationController {
 			if($file->rename($this->params->name)){
 				return new Response($file);
 			} else {
-				return new Response($file,false,gettext("Не удалось переименовать."));
+				return new ResponseError(gettext("Не удалось переименовать."));
 			}
 		} else {
-			return new Response($file,false,gettext("Фаил не найден"));
+			return new ResponseError(gettext("Фаил не найден"));
 		}
 	}
 	public function newfolder()
@@ -171,10 +170,10 @@ class FilesController extends ApplicationController {
 				$folder->initInfo();
 				return new Response($folder);
 			} else {
-				return new Response($file,false,gettext("Не удалось создать папку."));
+				return new ResponseError(gettext("Не удалось создать папку."),$file);
 			}
 		} else {
-			return new Response($file,false,gettext("Папка с таким именем уже существует."));
+			return new ResponseError(gettext("Папка с таким именем уже существует."),$file);
 		}
 	}
 	public function remove()
@@ -203,24 +202,24 @@ class FilesController extends ApplicationController {
 					}
 					else
 					{
-						return new Response('',false,gettext("Не удалось загрузить файл."));
+						return new ResponseError(gettext("Не удалось загрузить файл."));
 					}
 				} else {
 					switch($_FILES['file']['error'])
 					{
 						case UPLOAD_ERR_INI_SIZE:
 						case UPLOAD_ERR_FORM_SIZE:
-							return new Response('',false,gettext("Размер принятого файла превысил максимально допустимый размер."));
-						case UPLOAD_ERR_PARTIAL: return new Response('',false,gettext("Загружаемый файл был получен только частично."));
-						case UPLOAD_ERR_NO_FILE: return new Response('',false,gettext("Не удалось загрузить файл."));
+							return new ResponseError(gettext("Размер принятого файла превысил максимально допустимый размер."));
+						case UPLOAD_ERR_PARTIAL: return new ResponseError(gettext("Загружаемый файл был получен только частично."));
+						case UPLOAD_ERR_NO_FILE: return new ResponseError(gettext("Не удалось загрузить файл."));
 					}
 				}
 			} else {
-				return new Response('',false,gettext("Не найдена директория."));
+				return new ResponseError(gettext("Не найдена директория."));
 			}
 		} catch(Exception $ex) {
 			Log::exception($ex);
-			return new Response(false,false,gettext("Не возможно загрузить в эту директорию."));
+			return new ResponseError(gettext("Не возможно загрузить в эту директорию."));
 		}
 	}
 }

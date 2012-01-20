@@ -70,9 +70,32 @@
 	bottom: 8px;
 	cursor:pointer;
 }
+.x-filemng-panel .x-filemng-properties .x-filemng-preview,
+.x-filemng-panel .x-filemng-properties .x-filemng-params {
+	display: inline;
+}
+.x-filemng-panel .x-filemng-properties .x-filemng-preview
+{
+	display: inline-block;
+}
+.x-filemng-panel .x-filemng-properties .x-filemng-params {
+	display: inline-block;
+	vertical-align: top;
+}
+.x-filemng-panel .x-filemng-properties .x-filemng-params {
+	padding-left: 10px;
+}
+.x-filemng-panel .x-filemng-properties .x-filemng-buttons .x-filemng-button{
+	display: block;
+	padding-top:3px;
+	padding-bottom:3px;
+}
+.x-filemng-panel .x-filemng-properties .x-filemng-buttons {
+	float:right;
+} 
 .x-filemng-panel .x-filemng-listview .action-cut em{
 	filter:progid:DXImageTransform.Microsoft.Alpha(opacity=50); /* IE 5.5+*/
-	-moz-opacity: 0.5; /* Mozilla 1.6 и ниже */
+	-moz-opacity: 0.5; /* Mozilla 1.6 пїЅ пїЅпїЅпїЅпїЅ */
 	-khtml-opacity: 0.5; /* Konqueror 3.1, Safari 1.1 */
 	opacity: 0.5; /* CSS3 - Mozilla 1.7b +, Firefox 0.9 +, Safari 1.2+, Opera 9+ */
 
@@ -125,7 +148,7 @@
 	display:block;
 }
 
-/* Стили для превью вида */
+/* пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅ */
 .x-filemng-panel .x-filemng-icon .thumb {
 	padding: 3px;
 	height:75px;
@@ -207,12 +230,12 @@
 }
 .x-filemng-panel .x-filemng-icon .action-cut {
 	filter:progid:DXImageTransform.Microsoft.Alpha(opacity=50); /* IE 5.5+*/
-	-moz-opacity: 0.5; /* Mozilla 1.6 и ниже */
+	-moz-opacity: 0.5; /* Mozilla 1.6 пїЅ пїЅпїЅпїЅпїЅ */
 	-khtml-opacity: 0.5; /* Konqueror 3.1, Safari 1.1 */
 	opacity: 0.5; /* CSS3 - Mozilla 1.7b +, Firefox 0.9 +, Safari 1.2+, Opera 9+ */
 
 }
-/* Стили для кнопок */
+/* пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ */
 .x-filemng-panel .search {
 	background:#FFF url(images/search.png) 1px center no-repeat;
 	padding-left:18px;
