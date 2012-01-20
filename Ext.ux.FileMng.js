@@ -239,28 +239,28 @@ var DragSelector = function(cfg){
 };
 ns.ListView = Ext.extend(Ext.list.ListView,{
 	typeView:'icon',
-	loadingText:'Загрузка',
+	loadingText:t('Загрузка'),
 	columns: [{
-		header: 'Название',
+		header: t('Название'),
 		width: 0.5,
 		dataIndex: 'name',
 		//tpl: '{name}<div class="contrl"><a class="b-download"></a><a class="b-del"></a></div>',
 		cls:'file-name'
 	},{
-		header: 'Время изменения',
+		header: t('Время изменения'),
 		xtype: 'datecolumn',
 		format: 'd.m.Y h:i:s',
 		width: 0.25, 
 		dataIndex: 'lastmod'
 	},{
-		header: 'Размер',
+		header: t('Размер'),
 		dataIndex: 'size',
 		tpl: '<tpl if="size">{size:fileSize}</tpl>',
 		align: 'right',
 		cls: 'listview-filesize',
 		width: 0.15
 	},{
-		header: 'Доступ',
+		header: t('Доступ'),
 		dataIndex: 'state',
 		tpl: '<tpl if="values.state">{[values.state.perms.human]}</tpl>',
 		cls: 'listview-perms',
@@ -554,7 +554,7 @@ ns.Panel  = Ext.extend(Ext.Panel,{
 		find:{
 			xtype:'textfield',
 			enableKeyEvents:true,
-			emptyText:'Поиск',
+			emptyText:t('Поиск'),
 			cls:'search'
 		},
 		refresh:{
@@ -1139,50 +1139,69 @@ ns.Panel  = Ext.extend(Ext.Panel,{
 			'open_selected':this.openSelected,
 			'up':this.up,
 			'load_arhive':this.loadArhiveSelectFile,
+			'load_file':this.loadSelectFile,
 			'view_list':this.setTypeView.createDelegate(this,['list'],0),
 			'view_icon':this.setTypeView.createDelegate(this,['icon'],0)
 		});
 	},
 	// private
 	initTemplates:function(){
+		function b(cmd, text, cls)
+		{
+			return '<a href="javascript:void(0)" class="ext-cmd x-filemng-button ' + (cls || '') + '" id="cmd_' + cmd + '">' + text + '</a>';
+		}
 		this.tpls = {
 			'file':new Ext.XTemplate(
-				'<ul>',
-					'<li>',t('Имя файла'),': <b>{name}<tpl if="type!=\'dir\'"> <a href="'+this.baseUrl+'{id}" target="_blank" class="b-download">',t('Скачать'),'</a> <a href="javascript:void(0)" class="ext-cmd b-download" id="cmd_load_arhive">'+t('Скачать архивом')+'</a></tpl></b></li>',
+				'<div class="x-filemng-params"><ul>',
+					'<li>',t('Имя файла'),': <b>{name}</b></li>',
 					'<tpl if="lastmod"><li>',t('Время изменения'),': <b>{lastmod:date("d.m.Y h:i:s")}</b></li></tpl>',
 					'<tpl if="size"><li>',t('Размер файла'),': <b>{size:fileSize}</b></li></tpl>',
-				'</ul>'
+				'</ul></div>',
+				'<div class="x-filemng-buttons">',
+					'<tpl if="type!=\'dir\'">', b('load_file',t('Скачать'),'b-download'), '</tpl>',
+					b('load_arhive',t('Скачать архивом'),'b-download'),
+				'</div>'
 			),
 			'folder':new Ext.XTemplate(
-				'<ul>',
+				'<div class="x-filemng-params"><ul>',
 					'<li>',t('Папка с файлами'),': <b>{name}</b></li>',
-					'<li><a href="javascript:void(0)" class="ext-cmd b-download" id="cmd_load_arhive">'+t('Скачать архивом')+'</a></li>',
-				'</ul>'
+				'</ul></div>',
+				'<div class="x-filemng-buttons">',
+					b('load_arhive',t('Скачать архивом'),'b-download'),
+				'</div>'
 			),
-			'image': new Ext.XTemplate('<table><tr>',
-				'<td>',box('<div class="wrap-image"><img src="'+this.baseUrl+'{id}" height="100" alt="{name}"/><div class="magnifier" ></div><div class="white" ></div></div>'),'</td>',
-				'<td><ul>',
-					'<li>',t('Имя файла'),': <b>{name}</b> <a href="'+this.baseUrl+'{id}" target="_blank" class="b-download">Скачать</a> <a href="javascript:void(0)" class="ext-cmd b-download" id="cmd_load_arhive">'+t('Скачать архивом')+'</a></li>',
+			'image': new Ext.XTemplate(
+				'<div class="x-filemng-preview">',
+					box('<div class="wrap-image"><img src="'+this.baseUrl+'{id}" height="100" alt="{name}"/><div class="magnifier" ></div><div class="white" ></div></div>'),
+				'</div>',
+				'<div class="x-filemng-params"><ul>',
+					'<li>',t('Имя файла'),': <b>{name}</b> </li>',
 					'<tpl if="lastmod"><li>',t('Время изменения'),': <b>{lastmod:date("d.m.Y h:i:s")}</b></li></tpl>',
 					'<tpl if="size"><li>',t('Размер файла'),': <b>{size:fileSize}</b></li></tpl>',
 					'<li>',t('Ширина'),': <b>{width}px</b></li>',
 					'<li>',t('Высота'),': <b>{height}px</b></li>',
-				'</ul></td>',
-				'</tr></table>'
+				'</ul></div>',
+				'<div class="x-filemng-buttons">',
+					b('load_file',t('Скачать'),'b-download'),
+					b('load_arhive',t('Скачать архивом'),'b-download'),
+				'</div>'
 			),
 			'select': new Ext.Template(
-				'<ul>',
+				'<div class="x-filemng-params"><ul>',
 					'<li>',t('Выбрано элементов'),': <b>{number}</b> из <b>{numberFolder}</b></li>',
-					//'<tpl if="size"><li>',t('Размер файлов'),': <b>{size:fileSize}</b></li></tpl>',
-					'<li><a href="javascript:void(0)" class="ext-cmd b-download" id="cmd_load_arhive">'+t('Скачать архивом')+'</a></li>',
-				'</ul>'
+				'</ul></div>',
+				'<div class="x-filemng-buttons">',
+					b('load_arhive',t('Скачать архивом'),'b-download'),
+				'</div>'
 			),
 			'noselect': new Ext.Template(
-				'<ul>',
+				'<div class="x-filemng-params"><ul>',
 					'<li>',t('Папка с файлами'),': <b>{name}</b></li>',
 					'<li>',t('Элементов в папке'),': <b>{numberFolder}</b></li>',
-					'<li><a href="javascript:void(0)" class="ext-cmd b-download" id="cmd_load_arhive">'+t('Скачать архивом')+'</a></li>',
-				'</ul>'
+				'</ul></div>',
+				'<div class="x-filemng-buttons">',
+					b('load_arhive',t('Скачать архивом'),'b-download'),
+				'</div>'
 			)
 		};
 	},
@@ -1491,6 +1510,15 @@ ns.Panel  = Ext.extend(Ext.Panel,{
 			files = [this.getFolder()];
 		}
 		var win = window.open(this.actionParam('files','arhive',{files:files}));
+	},
+	loadSelectFile:function(){
+		var files = this.getSelectedPath();
+		if(files){
+			for(var i = 0,l = files.length; i < l;++i)
+			{
+				var win = window.open(this.baseUrl + files[i]);
+			}
+		}
 	}
 });
 })(Ext.ux.filemng,Ext.ux.filemng.local);

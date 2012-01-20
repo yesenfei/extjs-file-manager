@@ -26,7 +26,7 @@ class Log
 				$this->level |= $values{$v};
 			}
 		}
-		$this->dir = Cfg::get('log_dir',dirname(__FILE__).'/../log');
+		$this->dir = Cfg::get('log_dir',Cfg::get('log_dir'));
 		//$this->_write(date('d.m.Y H:i'));
 	}
 	static function timer($name)

@@ -1,5 +1,5 @@
 # Путь до файлов (Path to the file)
-baseDir: 'D:\web\home\test.loc\www\data'
+baseDir: '..\..\..\data'
 webDir: '/data'
 # Кодировка web страницы (Encoding of web page)
 charsetWeb: utf-8
@@ -14,8 +14,8 @@ lang: ru_RU
 mkdirmode: 0777
 # Скрывать файлы
 hidden: (^\..+)
-# Настрой лога
-log_dir: 'D:\web\home\test.loc\www\log'
+# Настройка лога
+log_dir: '..\..\logs'
 log_level: error|warning|info|debug
 # Максимальный размер загружаемого файла
 # maxUploadFileSize: 5 * 1024 * 1024
