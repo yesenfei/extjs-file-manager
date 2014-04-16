@@ -6,8 +6,9 @@ class FileModel extends BasefileModel
 	public function initInfo()
 	{
 		parent::initInfo();
-		$path = Cfg::get('baseDir').'/'.$this->id;
-		$this->lastmod = filemtime($path);
+		$path = Cfg::get('baseDir').$this->id;
+		Log::debug($path);
+		$this->lastmod = @filemtime($path);
 		$this->size =  sprintf("%u", filesize($path));
 		if($this->type != 'folder')
 		{

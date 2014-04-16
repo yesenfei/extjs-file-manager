@@ -1,0 +1,42 @@
+<html>
+<head>
+	<meta HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=utf-8"/>
+	<title>Файловый менеджер</title>
+	
+	<script type="text/javascript" src="http://cdn.sencha.com/ext-4.1.1a-gpl/ext-all-debug.js"></script>
+	<script type="text/javascript" src="http://cdn.sencha.com/ext-4.1.1a-gpl/locale/ext-lang-ru.js"></script>
+	
+	<link rel="stylesheet" type="text/css" href="http://cdn.sencha.com/ext-4.1.1a-gpl/resources/css/ext-all.css"/>
+	<link rel="stylesheet" type="text/css" href="ux/filemng/style.css"/>
+</head>
+<body>
+	<div>Version <span id="v">0.002</span> ExtJs 4.1</div>
+</body>
+<script type="text/javascript">
+Ext.onReady(function() {
+	 Ext.Loader.setConfig({
+		enabled: true,
+		paths: {
+			'Ext.ux': 'ux'
+		}
+	});
+	Ext.state.Manager.setProvider(new Ext.state.CookieProvider());
+	var win = new Ext.Window({
+		layout:'fit',
+		width:1000,
+		height:600,
+		title:'Менеджер файлов',
+		maximizable:true,
+		items: [
+			Ext.create('Ext.ux.filemng.Panel',{
+				border:false,
+				stateId:'saf',
+				stateful:true,
+				baseUrl:'/data'
+			})
+		]
+	});
+	win.show()
+});
+</script>
+</html>

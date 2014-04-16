@@ -27,7 +27,7 @@ class ApplicationController {
 			}
 		} catch(Exception $ex) {
 			Log::exception($ex);
-			return new Response(false,false,gettext("Ошибка на сервере пробуйте позже."));
+			return new Response(false,false,gettext("РћС€РёР±РєР° РЅР° СЃРµСЂРІРµСЂРµ РїСЂРѕР±СѓР№С‚Рµ РїРѕР·Р¶Рµ."));
 		}
 	}
 

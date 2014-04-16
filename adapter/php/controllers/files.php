@@ -1,5 +1,6 @@
 <?php
 class FilesController extends ApplicationController {
+	
 	public function index()
 	{
 		try {
@@ -28,11 +29,12 @@ class FilesController extends ApplicationController {
 	{
 		//echo Lib::isWrite($this->params->dir);
 		try {
-			$file = BasefileModel::createFromPathAndName($this->params->dir,$this->params->name);
+			$file = BasefileModel::createFromPathAndName($this->params->dir,$this->params->name, false);
+			
 			return new Response($file?true:false);
 		} catch(Exception $ex) {
 			Log::exception($ex);
-			return new ResponseError($ex->message);
+			return new ResponseError($ex->getMessage());
 		}
 	}
 	public function preview()
