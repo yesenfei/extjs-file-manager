@@ -26,16 +26,17 @@ class Request {
 			parse_str($raw, $params);
 
 			if (isset($params['data'])) {
-				$this->params =  json_decode(stripslashes($params['data']));
+				$this->params =  json_decode($params['data']);
 			} else {
-				$params = json_decode(stripslashes($raw));
+				$params = json_decode($raw);
 				$this->params = $params->data;
 			}
 		} else {
 			// grab JSON data if there...
+			
 			if(isset($_REQUEST['data']))
 			{
-				$this->params =  json_decode(stripslashes($_REQUEST['data']));
+				$this->params =  json_decode($_REQUEST['data']);
 			} else {
 				$this->params = json_decode('{}');
 				foreach($_REQUEST as $n=>$v)

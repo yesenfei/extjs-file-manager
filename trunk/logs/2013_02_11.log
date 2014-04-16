@@ -1,0 +1,523 @@
+=====================================================================================================================================================
+Controller: files
+Action: getChildFolderTree
+Id: 
+stdClass Object
+(
+    [_dc] => 1360523049207
+    [dir] => /
+    [id] => /
+    [PHPSESSID] => a74f9089dfbe9107b321f4011c855eb7
+)
+
+Timer app:0.007316us
+=====================================================================================================================================================
+Controller: files
+Action: getChildFolderTree
+Id: 
+stdClass Object
+(
+    [_dc] => 1360523054049
+    [dir] => images
+    [id] => images
+    [PHPSESSID] => a74f9089dfbe9107b321f4011c855eb7
+)
+
+Timer app:0.044187us
+=====================================================================================================================================================
+Controller: files
+Action: getChildFolderTree
+Id: 
+stdClass Object
+(
+    [_dc] => 1360523055516
+    [dir] => images/Картинки
+    [id] => images/Картинки
+    [PHPSESSID] => a74f9089dfbe9107b321f4011c855eb7
+)
+
+Timer app:0.008952us
+=====================================================================================================================================================
+Controller: files
+Action: getChildFolderTree
+Id: 
+stdClass Object
+(
+    [_dc] => 1360523056911
+    [dir] => Новая папка2
+    [id] => Новая папка2
+    [PHPSESSID] => a74f9089dfbe9107b321f4011c855eb7
+)
+
+Timer app:0.004756us
+=====================================================================================================================================================
+Controller: files
+Action: getChildFolderTree
+Id: 
+stdClass Object
+(
+    [_dc] => 1360523058024
+    [dir] => Новая папка2/fsdfsdfgsdf
+    [id] => Новая папка2/fsdfsdfgsdf
+    [PHPSESSID] => a74f9089dfbe9107b321f4011c855eb7
+)
+
+Timer app:0.028257us
+=====================================================================================================================================================
+Controller: files
+Action: getChildFolderTree
+Id: 
+stdClass Object
+(
+    [_dc] => 1360523067005
+    [dir] => /
+    [id] => /
+    [PHPSESSID] => a74f9089dfbe9107b321f4011c855eb7
+)
+
+Timer app:0.005315us
+=====================================================================================================================================================
+Controller: files
+Action: getChildFolderTree
+Id: 
+stdClass Object
+(
+    [_dc] => 1360523069119
+    [dir] => images
+    [id] => images
+    [PHPSESSID] => a74f9089dfbe9107b321f4011c855eb7
+)
+
+Timer app:0.005763us
+=====================================================================================================================================================
+Controller: files
+Action: getChildFolderTree
+Id: 
+stdClass Object
+(
+    [_dc] => 1360523292345
+    [dir] => /
+    [id] => /
+    [PHPSESSID] => a74f9089dfbe9107b321f4011c855eb7
+)
+
+Timer app:0.007642us
+=====================================================================================================================================================
+Controller: files
+Action: getChildFolderTree
+Id: 
+stdClass Object
+(
+    [_dc] => 1360523484853
+    [dir] => /
+    [id] => /
+    [PHPSESSID] => a74f9089dfbe9107b321f4011c855eb7
+)
+
+Timer app:0.005981us
+=====================================================================================================================================================
+Controller: files
+Action: getChildFolderTree
+Id: 
+stdClass Object
+(
+    [_dc] => 1360523592786
+    [dir] => /
+    [id] => /
+    [PHPSESSID] => a74f9089dfbe9107b321f4011c855eb7
+)
+
+Timer app:0.010492us
+=====================================================================================================================================================
+Controller: files
+Action: getChildFolderTree
+Id: 
+stdClass Object
+(
+    [_dc] => 1360523619696
+    [dir] => /
+    [id] => /
+    [PHPSESSID] => a74f9089dfbe9107b321f4011c855eb7
+)
+
+Timer app:0.007845us
+=====================================================================================================================================================
+Controller: files
+Action: getChildFolderTree
+Id: 
+stdClass Object
+(
+    [_dc] => 1360523680880
+    [dir] => /
+    [id] => /
+    [PHPSESSID] => a74f9089dfbe9107b321f4011c855eb7
+)
+
+Timer app:0.005797us
+=====================================================================================================================================================
+Controller: files
+Action: getChildFolderTree
+Id: 
+stdClass Object
+(
+    [_dc] => 1360523798107
+    [dir] => /
+    [id] => /
+    [PHPSESSID] => a74f9089dfbe9107b321f4011c855eb7
+)
+
+Timer app:0.006292us
+=====================================================================================================================================================
+Controller: files
+Action: getChildFolderTree
+Id: 
+stdClass Object
+(
+    [_dc] => 1360523847611
+    [dir] => /
+    [id] => /
+    [PHPSESSID] => a74f9089dfbe9107b321f4011c855eb7
+)
+
+Timer app:0.009847us
+=====================================================================================================================================================
+Controller: files
+Action: getChildFolderTree
+Id: 
+stdClass Object
+(
+    [_dc] => 1360523958979
+    [dir] => /
+    [id] => /
+    [PHPSESSID] => a74f9089dfbe9107b321f4011c855eb7
+)
+
+Timer app:0.008159us
+=====================================================================================================================================================
+Controller: files
+Action: getChildFolderTree
+Id: 
+stdClass Object
+(
+    [_dc] => 1360524227715
+    [dir] => /
+    [id] => /
+    [PHPSESSID] => a74f9089dfbe9107b321f4011c855eb7
+)
+
+Timer app:0.005794us
+=====================================================================================================================================================
+Controller: files
+Action: getChildFolderTree
+Id: 
+stdClass Object
+(
+    [_dc] => 1360524286594
+    [dir] => /
+    [id] => /
+    [PHPSESSID] => a74f9089dfbe9107b321f4011c855eb7
+)
+
+Timer app:0.006225us
+=====================================================================================================================================================
+Controller: files
+Action: 
+Id: 
+stdClass Object
+(
+    [dir] => images
+    [PHPSESSID] => a74f9089dfbe9107b321f4011c855eb7
+    [ys-saf] => o:statePath=s%3Aimages^treePanelHidden=b%3A0^propertiesPanelHidden=b%3A0
+)
+
+Timer app:0.052062us
+=====================================================================================================================================================
+Controller: files
+Action: preview
+Id: images/190220111220.jpg
+stdClass Object
+(
+    [width] => 100
+    [height] => 75
+    [mode] => 2
+    [PHPSESSID] => a74f9089dfbe9107b321f4011c855eb7
+    [ys-saf] => o:statePath=s%3Aimages^treePanelHidden=b%3A0^propertiesPanelHidden=b%3A0
+)
+
+100,75
+Timer app:0.014695us
+=====================================================================================================================================================
+Controller: files
+Action: preview
+Id: images/190220111220.jpg
+stdClass Object
+(
+    [width] => 100
+    [height] => 75
+    [mode] => 2
+    [PHPSESSID] => a74f9089dfbe9107b321f4011c855eb7
+    [ys-saf] => o:statePath=s%3Aimages^treePanelHidden=b%3A0^propertiesPanelHidden=b%3A0
+)
+
+100,75
+Timer app:0.006549us
+=====================================================================================================================================================
+Controller: files
+Action: preview
+Id: images/190220111220.jpg
+stdClass Object
+(
+    [width] => 100
+    [height] => 75
+    [mode] => 2
+    [PHPSESSID] => a74f9089dfbe9107b321f4011c855eb7
+    [ys-saf] => o:statePath=s%3Aimages^treePanelHidden=b%3A0^propertiesPanelHidden=b%3A0
+    [ys-filemng-view-state-images] => s:list
+)
+
+100,75
+Timer app:0.022563us
+=====================================================================================================================================================
+Controller: files
+Action: preview
+Id: images/190220111220.jpg
+stdClass Object
+(
+    [width] => 100
+    [height] => 75
+    [mode] => 2
+    [PHPSESSID] => a74f9089dfbe9107b321f4011c855eb7
+    [ys-saf] => o:statePath=s%3Aimages^treePanelHidden=b%3A0^propertiesPanelHidden=b%3A0
+    [ys-filemng-view-state-images] => s:icon
+)
+
+100,75
+Timer app:0.010354us
+=====================================================================================================================================================
+Controller: files
+Action: preview
+Id: images/190220111220.jpg
+stdClass Object
+(
+    [width] => 100
+    [height] => 75
+    [mode] => 2
+    [PHPSESSID] => a74f9089dfbe9107b321f4011c855eb7
+    [ys-saf] => o:statePath=s%3Aimages^treePanelHidden=b%3A0^propertiesPanelHidden=b%3A0
+    [ys-filemng-view-state-images] => s:icon
+)
+
+100,75
+Timer app:0.008363us
+=====================================================================================================================================================
+Controller: files
+Action: preview
+Id: images/190220111220.jpg
+stdClass Object
+(
+    [width] => 100
+    [height] => 75
+    [mode] => 2
+    [PHPSESSID] => a74f9089dfbe9107b321f4011c855eb7
+    [ys-saf] => o:statePath=s%3Aimages^treePanelHidden=b%3A0^propertiesPanelHidden=b%3A0
+    [ys-filemng-view-state-images] => s:icon
+)
+
+100,75
+Timer app:0.007535us
+=====================================================================================================================================================
+Controller: files
+Action: preview
+Id: images/190220111220.jpg
+stdClass Object
+(
+    [width] => 100
+    [height] => 75
+    [mode] => 2
+    [PHPSESSID] => a74f9089dfbe9107b321f4011c855eb7
+    [ys-saf] => o:statePath=s%3Aimages^treePanelHidden=b%3A0^propertiesPanelHidden=b%3A0
+    [ys-filemng-view-state-images] => s:icon
+)
+
+100,75
+Timer app:0.006676us
+=====================================================================================================================================================
+Controller: files
+Action: getChildFolderTree
+Id: 
+stdClass Object
+(
+    [_dc] => 1360524655550
+    [dir] => /
+    [id] => /
+    [PHPSESSID] => a74f9089dfbe9107b321f4011c855eb7
+    [ys-saf] => o:statePath=s%3Aimages^treePanelHidden=b%3A0^propertiesPanelHidden=b%3A0
+    [ys-filemng-view-state-images] => s:icon
+)
+
+Timer app:0.005339us
+=====================================================================================================================================================
+Controller: files
+Action: getChildFolderTree
+Id: 
+stdClass Object
+(
+    [_dc] => 1360524682321
+    [dir] => /
+    [id] => /
+    [PHPSESSID] => a74f9089dfbe9107b321f4011c855eb7
+    [ys-saf] => o:statePath=s%3Aimages^treePanelHidden=b%3A0^propertiesPanelHidden=b%3A0
+    [ys-filemng-view-state-images] => s:icon
+)
+
+Timer app:0.006625us
+=====================================================================================================================================================
+Controller: files
+Action: getChildFolderTree
+Id: 
+stdClass Object
+(
+    [_dc] => 1360524749402
+    [dir] => /
+    [id] => /
+    [PHPSESSID] => a74f9089dfbe9107b321f4011c855eb7
+    [ys-saf] => o:statePath=s%3Aimages^treePanelHidden=b%3A0^propertiesPanelHidden=b%3A0
+    [ys-filemng-view-state-images] => s:icon
+)
+
+Timer app:0.00599us
+=====================================================================================================================================================
+Controller: files
+Action: getChildFolderTree
+Id: 
+stdClass Object
+(
+    [_dc] => 1360524818536
+    [dir] => /
+    [id] => /
+    [PHPSESSID] => a74f9089dfbe9107b321f4011c855eb7
+    [ys-saf] => o:statePath=s%3Aimages^treePanelHidden=b%3A0^propertiesPanelHidden=b%3A0
+    [ys-filemng-view-state-images] => s:icon
+)
+
+Timer app:0.00524us
+=====================================================================================================================================================
+Controller: files
+Action: getChildFolderTree
+Id: 
+stdClass Object
+(
+    [_dc] => 1360524834807
+    [dir] => /
+    [id] => /
+    [PHPSESSID] => a74f9089dfbe9107b321f4011c855eb7
+    [ys-saf] => o:statePath=s%3Aimages^treePanelHidden=b%3A0^propertiesPanelHidden=b%3A0
+    [ys-filemng-view-state-images] => s:icon
+)
+
+Timer app:0.006436us
+=====================================================================================================================================================
+Controller: files
+Action: getChildFolderTree
+Id: 
+stdClass Object
+(
+    [_dc] => 1360524938975
+    [dir] => /
+    [id] => /
+    [PHPSESSID] => a74f9089dfbe9107b321f4011c855eb7
+    [ys-saf] => o:statePath=s%3Aimages^treePanelHidden=b%3A0^propertiesPanelHidden=b%3A0
+    [ys-filemng-view-state-images] => s:icon
+)
+
+Timer app:0.00893us
+=====================================================================================================================================================
+Controller: files
+Action: getChildFolderTree
+Id: 
+stdClass Object
+(
+    [_dc] => 1360525104570
+    [dir] => /
+    [id] => /
+    [PHPSESSID] => a74f9089dfbe9107b321f4011c855eb7
+    [ys-saf] => o:statePath=s%3Aimages^treePanelHidden=b%3A0^propertiesPanelHidden=b%3A0
+    [ys-filemng-view-state-images] => s:icon
+)
+
+Timer app:0.006581us
+=====================================================================================================================================================
+Controller: files
+Action: getChildFolderTree
+Id: 
+stdClass Object
+(
+    [_dc] => 1360525258048
+    [dir] => /
+    [id] => /
+    [PHPSESSID] => a74f9089dfbe9107b321f4011c855eb7
+    [ys-saf] => o:statePath=s%3Aimages^treePanelHidden=b%3A0^propertiesPanelHidden=b%3A0
+    [ys-filemng-view-state-images] => s:icon
+)
+
+Timer app:0.005974us
+=====================================================================================================================================================
+Controller: files
+Action: getChildFolderTree
+Id: 
+stdClass Object
+(
+    [_dc] => 1360525340487
+    [dir] => /
+    [id] => /
+    [PHPSESSID] => a74f9089dfbe9107b321f4011c855eb7
+    [ys-saf] => o:statePath=s%3Aimages^treePanelHidden=b%3A0^propertiesPanelHidden=b%3A0
+    [ys-filemng-view-state-images] => s:icon
+)
+
+Timer app:0.012298us
+=====================================================================================================================================================
+Controller: files
+Action: getChildFolderTree
+Id: 
+stdClass Object
+(
+    [_dc] => 1360525384299
+    [dir] => /
+    [id] => /
+    [PHPSESSID] => a74f9089dfbe9107b321f4011c855eb7
+    [ys-saf] => o:statePath=s%3Aimages^treePanelHidden=b%3A0^propertiesPanelHidden=b%3A0
+    [ys-filemng-view-state-images] => s:icon
+)
+
+Timer app:0.005321us
+=====================================================================================================================================================
+Controller: files
+Action: getChildFolderTree
+Id: 
+stdClass Object
+(
+    [_dc] => 1360525407165
+    [dir] => /
+    [id] => /
+    [PHPSESSID] => a74f9089dfbe9107b321f4011c855eb7
+    [ys-saf] => o:statePath=s%3Aimages^treePanelHidden=b%3A0^propertiesPanelHidden=b%3A0
+    [ys-filemng-view-state-images] => s:icon
+)
+
+Timer app:0.006867us
+=====================================================================================================================================================
+Controller: files
+Action: getChildFolderTree
+Id: 
+stdClass Object
+(
+    [_dc] => 1360551375251
+    [dir] => images
+    [id] => images
+    [PHPSESSID] => a74f9089dfbe9107b321f4011c855eb7
+    [ys-saf] => o:statePath=s%3Aimages^treePanelHidden=b%3A0^propertiesPanelHidden=b%3A0
+    [ys-filemng-view-state-images] => s:icon
+)
+
+Timer app:0.005311us

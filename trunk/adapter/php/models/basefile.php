@@ -17,11 +17,18 @@ class BaseFileModel
 			}
 		}
 		$this->name = $name;
+		Log::debug('dir');
+		Log::debug($dir);
 		$this->dir = trim($dir,' /\\');
+		Log::debug($this->dir);
 		if($this->dir != ''){
 			$this->id = $this->dir.'/'.$name;
 		} else {
 			$this->id = $name;
+		}
+		if(strpos($this->id, '/') !== 0)
+		{
+			$this->id = '/'.$this->id;
 		}
 	}
 	public function initInfo()

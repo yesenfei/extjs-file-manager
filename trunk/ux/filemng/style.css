@@ -204,7 +204,9 @@
     padding: 4px;
 }
 
-.x-filemng-panel .x-filemng-icon .x-list-selected {
+.x-filemng-panel .x-filemng-icon .x-list-selected, 
+.x-filemng-panel .x-filemng-icon .x-item-selected 
+{
     background: #DFEDFF;
     border: 1px solid #6593cf;
     padding: 4px;
@@ -296,4 +298,75 @@
 }
 .x-filemng-panel .b-download {
 	background-image:url(images/folder_get.png);
+}
+
+.x-filemng-list .x-list-header {
+	overflow: hidden;
+	border-right: 1px solid #c5c5c5;
+	border-left: 0 none;
+	border-top: 0 none;
+	border-bottom: 0 none;
+	text-shadow: 0 1px 0 rgba(255,255,255,0.3);
+	color: null;
+	font: normal 11px tahoma,arial,verdana,sans-serif;
+	background-image: none;
+	background-color: #c5c5c5;
+	background-image: -webkit-gradient(linear,50% 0,50% 100%,color-stop(0%,#f9f9f9),color-stop(100%,#e3e4e6));
+	background-image: -webkit-linear-gradient(top,#f9f9f9,#e3e4e6);
+	background-image: -moz-linear-gradient(top,#f9f9f9,#e3e4e6);
+	background-image: -o-linear-gradient(top,#f9f9f9,#e3e4e6);
+	background-image: -ms-linear-gradient(top,#f9f9f9,#e3e4e6);
+	background-image: linear-gradient(top,#f9f9f9,#e3e4e6);
+}
+.x-filemng-list .x-list-header-inner .x-list-column em {
+	display: block;
+	border-left: 1px solid #ddd;
+	padding: 4px 4px;
+	overflow: hidden;
+	padding-right: 15px;
+}
+.x-filemng-list .x-list-header {
+	width:100%;
+	height: 25px;
+}
+.x-filemng-list .x-list-header .x-column-header-text {
+	background-position: right center;
+}
+.x-filemng-list .x-list-header em.sort-desc {
+	background-image: url(../images/default/grid/sort-hd.gif);
+	border-color: #99bbe8;
+}
+.x-filemng-list .x-list-body-wrap {
+	
+}
+.x-filemng-list .x-list-body {
+	overflow: auto;
+	height: 100%;
+	width: 100%;
+}
+.x-filemng-list .x-list-body dt em {
+	display: block;
+	padding: 3px 4px;
+	overflow: hidden;
+}
+
+.x-filemng-list .x-list-body dt {
+	display: block;
+	float: left;
+	overflow: hidden;
+	-o-text-overflow: ellipsis;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	cursor: pointer;
+	zoom: 1;
+}
+.x-filemng-list .x-item-selected {
+	background-color: #DFEDFF;
+}
+.x-filemng-list {
+	user-select: none;
+	-o-user-select: none;
+	-ms-user-select: none;
+	-moz-user-select: -moz-none;
+	-webkit-user-select: none;
 }
