@@ -1,0 +1,1 @@
+Файловый менеджер на основе библиотеки ExtJs3. [demo](http://softcoder.ru/filemng/index.4.1.html)
